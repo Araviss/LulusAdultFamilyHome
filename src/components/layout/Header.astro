@@ -1,0 +1,43 @@
+---
+import { NAV_LINKS, SITE_NAME, PHONE } from "../../content/site";
+import MobileNav from "./MobileNav";
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-50 bg-brand-cream/95 backdrop-blur-sm section-rule">
+  <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+
+    <a href="/" class="flex items-center gap-2.5" aria-label={`${SITE_NAME} home`}>
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+        <path d="M16 3L3 13v16h9v-9h8v9h9V13L16 3z" fill="var(--color-brand-sage)" />
+      </svg>
+      <span class="flex flex-col leading-none">
+        <span class="text-base font-semibold text-brand-brown" style="font-family: var(--font-serif)">Lulu's Care</span>
+        <span class="text-[11px] text-brand-muted tracking-wide">Adult Family Home</span>
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8" aria-label="Main navigation">
+      {NAV_LINKS.map((link) => (
+        <a
+          href={link.href}
+          class={`text-sm font-medium transition-colors duration-200 hover:text-brand-sage ${
+            currentPath === link.href ? "text-brand-brown" : "text-brand-brown/65"
+          }`}
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <a
+      href={`tel:${PHONE}`}
+      class="hidden md:inline-flex items-center gap-2 bg-brand-sage text-brand-cream text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-brand-terra transition-colors duration-200"
+    >
+      {PHONE}
+    </a>
+
+    <MobileNav links={NAV_LINKS} client:load />
+  </div>
+</header>

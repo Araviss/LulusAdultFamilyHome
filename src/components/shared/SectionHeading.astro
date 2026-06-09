@@ -1,0 +1,41 @@
+---
+interface Props {
+  label?: string;
+  title: string;
+  highlight?: string;
+  description?: string;
+  align?: "left" | "center";
+  highlightColor?: "sage" | "terra";
+}
+
+const {
+  label,
+  title,
+  highlight,
+  description,
+  align = "left",
+  highlightColor = "sage",
+} = Astro.props;
+
+const alignClass = align === "center" ? "text-center items-center" : "text-left items-start";
+const highlightColorClass = highlightColor === "terra" ? "text-brand-terra" : "text-brand-sage";
+---
+
+<div class={`flex flex-col gap-3 ${alignClass}`}>
+  {label && (
+    <span class="text-xs font-semibold uppercase tracking-widest text-brand-terra">
+      {label}
+    </span>
+  )}
+  <h2 class="text-display-sm text-brand-brown">
+    {title}
+    {highlight && (
+      <span class={highlightColorClass}> {highlight}</span>
+    )}
+  </h2>
+  {description && (
+    <p class="text-lg text-brand-brown/60 max-w-2xl leading-relaxed mt-1">
+      {description}
+    </p>
+  )}
+</div>

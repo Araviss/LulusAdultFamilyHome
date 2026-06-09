@@ -1,0 +1,36 @@
+---
+interface Props {
+  label?: string;
+  title: string;
+  highlight?: string;
+  description?: string;
+}
+
+const { label, title, highlight, description } = Astro.props;
+---
+
+<section class="bg-brand-surface pt-32 pb-20 px-6 relative overflow-hidden">
+
+  <div
+    class="absolute inset-0 pointer-events-none select-none"
+    aria-hidden="true"
+    style="background: radial-gradient(ellipse at 70% 50%, color-mix(in srgb, var(--color-brand-sage) 8%, transparent), transparent 60%)"
+  ></div>
+
+  <div class="relative max-w-6xl mx-auto flex flex-col gap-4">
+    {label && (
+      <span class="text-xs font-semibold uppercase tracking-widest text-brand-terra">
+        {label}
+      </span>
+    )}
+    <h1 class="text-display text-brand-brown">
+      {title}
+      {highlight && <span class="text-brand-sage"> {highlight}</span>}
+    </h1>
+    {description && (
+      <p class="text-xl text-brand-brown/60 max-w-2xl leading-relaxed mt-2">
+        {description}
+      </p>
+    )}
+  </div>
+</section>

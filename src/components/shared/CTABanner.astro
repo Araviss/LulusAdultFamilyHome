@@ -1,0 +1,36 @@
+---
+import { PHONE } from "../../content/site";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Ready to learn more?",
+  description = "Call us or send a message — no commitment, just a conversation.",
+} = Astro.props;
+---
+
+<section class="bg-brand-sage px-6 py-20 md:py-24">
+  <div class="max-w-3xl mx-auto text-center flex flex-col items-center gap-6">
+    <h2 class="text-display-sm text-brand-cream">{title}</h2>
+    {description && (
+      <p class="text-brand-cream/80 text-lg leading-relaxed">{description}</p>
+    )}
+    <div class="flex flex-col sm:flex-row items-center gap-4 mt-2">
+      <a
+        href={`tel:${PHONE}`}
+        class="inline-flex items-center justify-center bg-brand-cream text-brand-brown font-semibold px-8 py-3.5 rounded-lg hover:bg-brand-terra hover:text-brand-cream transition-colors duration-200"
+      >
+        Call {PHONE}
+      </a>
+      <a
+        href="/contact"
+        class="inline-flex items-center justify-center border-2 border-brand-cream/50 text-brand-cream font-semibold px-8 py-3.5 rounded-lg hover:bg-brand-cream/10 transition-colors duration-200"
+      >
+        Send a Message
+      </a>
+    </div>
+  </div>
+</section>

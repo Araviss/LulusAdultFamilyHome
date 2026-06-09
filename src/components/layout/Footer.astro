@@ -1,0 +1,49 @@
+---
+import { NAV_LINKS, SITE_NAME, PHONE, EMAIL, ADDRESS } from "../../content/site";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="section-rule bg-brand-surface px-6 py-14">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
+
+    <div class="flex flex-col gap-3">
+      <a href="/" class="flex items-center gap-2.5" aria-label={`${SITE_NAME} home`}>
+        <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 3L3 13v16h9v-9h8v9h9V13L16 3z" fill="var(--color-brand-sage)" />
+        </svg>
+        <span class="font-semibold text-brand-brown" style="font-family: var(--font-serif)">Lulu's Care</span>
+      </a>
+      <p class="text-sm text-brand-muted leading-relaxed">
+        Licensed Adult Family Home<br />{ADDRESS.city}, {ADDRESS.state}
+      </p>
+    </div>
+
+    <nav class="flex flex-col gap-3" aria-label="Footer navigation">
+      {NAV_LINKS.map((link) => (
+        <a
+          href={link.href}
+          class="text-sm text-brand-brown/60 hover:text-brand-sage transition-colors duration-200"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="flex flex-col gap-3 text-sm">
+      <a href={`tel:${PHONE}`} class="text-brand-brown/70 hover:text-brand-sage transition-colors duration-200">
+        {PHONE}
+      </a>
+      <a href={`mailto:${EMAIL}`} class="text-brand-brown/70 hover:text-brand-sage transition-colors duration-200 break-all">
+        {EMAIL}
+      </a>
+    </div>
+
+  </div>
+
+  <div class="max-w-6xl mx-auto mt-10 pt-6 section-rule">
+    <p class="text-xs text-brand-muted">
+      &copy; {year} {SITE_NAME}. Site by <a href="https://stackbyte.co" class="hover:text-brand-sage transition-colors duration-200">Stackbyte</a>.
+    </p>
+  </div>
+</footer>
