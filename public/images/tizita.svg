@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 525" width="420" height="525">
+  <rect width="420" height="525" fill="#EAE7E1"/>
+  <rect x="1" y="1" width="418" height="523" fill="none" stroke="#C8C4BC" stroke-width="2" stroke-dasharray="12 6"/>
+  <circle cx="210" cy="190" r="65" fill="#C8C4BC" opacity="0.45"/>
+  <path d="M90 526 Q90 360 210 330 Q330 360 330 526Z" fill="#C8C4BC" opacity="0.35"/>
+  <text x="210" y="472" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#888880" letter-spacing="0.5">REPLACE WITH REAL PHOTO</text>
+  <text x="210" y="495" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#AAAAAA">Tizita — owner &amp; primary caregiver</text>
+</svg>
