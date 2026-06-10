@@ -1,0 +1,257 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CTABanner from "../components/shared/CTABanner.astro";
+---
+
+<BaseLayout
+  title="The Home"
+  description="A licensed adult family home on a quiet residential street in Everett, WA. Have a look around."
+>
+
+  <!-- 1. Title block -->
+  <section class="title-block">
+    <div class="inner">
+      <h1 class="page-heading">The Home</h1>
+      <p class="page-sub">A licensed adult family home on a quiet residential street in Everett. Have a look around.</p>
+    </div>
+  </section>
+
+  <!-- 2. Photo essay -->
+  <div class="essay inner">
+
+    <!-- Row A — Full-width opener -->
+    <div class="row row-a">
+      <figure>
+        <div class="slot" style="aspect-ratio: 21/9;">
+          <span>REPLACE WITH REAL PHOTO<br/>best available photo — likely exterior or living room</span>
+        </div>
+        <figcaption>The front of the house</figcaption>
+      </figure>
+    </div>
+
+    <!-- Row B — 60/40 pair -->
+    <div class="row row-b">
+      <figure>
+        <div class="slot" style="aspect-ratio: 4/3;">
+          <span>REPLACE WITH REAL PHOTO<br/>shared space — wide</span>
+        </div>
+        <figcaption>The living room</figcaption>
+      </figure>
+      <figure>
+        <div class="slot" style="aspect-ratio: 3/4;">
+          <span>REPLACE WITH REAL PHOTO<br/>detail — vertical (e.g. hallway, reading corner, place setting)</span>
+        </div>
+      </figure>
+    </div>
+
+    <!-- Row C — Single, right-offset -->
+    <div class="row row-c">
+      <figure class="offset-right">
+        <div class="slot" style="aspect-ratio: 3/2;">
+          <span>REPLACE WITH REAL PHOTO<br/>dining / kitchen</span>
+        </div>
+        <figcaption>The kitchen</figcaption>
+      </figure>
+    </div>
+
+    <!-- 3. Mid-page text moment -->
+    <div class="text-moment">
+      <p>This is a house on a normal street — not a wing, not a unit, not a facility. Residents live here, and it looks like it.</p>
+    </div>
+
+    <!-- Row D — 40/60 pair (mirror of B) -->
+    <div class="row row-d">
+      <figure>
+        <div class="slot" style="aspect-ratio: 3/4;">
+          <span>REPLACE WITH REAL PHOTO<br/>resident room — staged, no personal items</span>
+        </div>
+      </figure>
+      <figure>
+        <div class="slot" style="aspect-ratio: 4/3;">
+          <span>REPLACE WITH REAL PHOTO<br/>shared space — second angle</span>
+        </div>
+        <figcaption>Rooms are private or semi-private</figcaption>
+      </figure>
+    </div>
+
+    <!-- Row E — Single, left-offset -->
+    <div class="row row-e">
+      <figure class="offset-left">
+        <div class="slot" style="aspect-ratio: 3/2;">
+          <span>REPLACE WITH REAL PHOTO<br/>outdoor space / backyard / patio</span>
+        </div>
+        <figcaption>The back patio</figcaption>
+      </figure>
+    </div>
+
+    <!-- Row F — Full-width closer -->
+    <div class="row row-f">
+      <figure>
+        <div class="slot" style="aspect-ratio: 21/9;">
+          <span>REPLACE WITH REAL PHOTO<br/>warm closer — exterior at golden hour, or front entrance</span>
+        </div>
+      </figure>
+    </div>
+
+  </div>
+
+  <!-- 4. CTA band -->
+  <CTABanner
+    title="Pictures only go so far"
+    description="Come walk through the home yourself — no commitment, just a visit."
+  />
+
+</BaseLayout>
+
+<style>
+  /* ─── Title block ─── */
+  .title-block {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+    padding: 112px 24px 40px;
+  }
+
+  .inner {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  .page-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 2.75rem);
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #111111;
+    margin: 0 0 16px;
+  }
+
+  .page-sub {
+    font-size: 18px;
+    color: rgba(17, 17, 17, 0.60);
+    line-height: 1.65;
+    max-width: 52ch;
+    margin: 0;
+  }
+
+  /* ─── Essay container ─── */
+  .essay {
+    padding-top: 56px;
+    padding-bottom: 80px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  /* ─── Rows ─── */
+  .row {
+    margin-bottom: 88px;
+  }
+
+  .row:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ─── Placeholder slot ─── */
+  .slot {
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+    background: #EAE7E1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .slot span {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(44, 36, 32, 0.3);
+    text-align: center;
+    padding: 24px;
+    line-height: 1.9;
+    font-weight: 500;
+  }
+
+  /* ─── Captions ─── */
+  figcaption {
+    font-size: 14px;
+    color: rgba(17, 17, 17, 0.40);
+    margin: 10px 0 0;
+    line-height: 1.5;
+  }
+
+  figure {
+    margin: 0;
+  }
+
+  /* ─── Row B (60/40) ─── */
+  .row-b {
+    display: grid;
+    grid-template-columns: 60fr 40fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  /* ─── Row C (single, right-offset 70%) ─── */
+  .row-c {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .offset-right {
+    width: 70%;
+  }
+
+  /* ─── Row D (40/60) ─── */
+  .row-d {
+    display: grid;
+    grid-template-columns: 40fr 60fr;
+    gap: 16px;
+    align-items: start;
+  }
+
+  /* ─── Row E (single, left-offset 70%) ─── */
+  .offset-left {
+    width: 70%;
+  }
+
+  /* ─── Mid-page text moment ─── */
+  .text-moment {
+    padding: 96px 0;
+    max-width: 50ch;
+  }
+
+  .text-moment p {
+    font-size: 19px;
+    color: rgba(17, 17, 17, 0.75);
+    line-height: 1.65;
+    margin: 0;
+  }
+
+  /* ─── Mobile ─── */
+  @media (max-width: 767px) {
+    .title-block {
+      padding-top: 96px;
+    }
+
+    .row {
+      margin-bottom: 44px;
+    }
+
+    .row-b,
+    .row-d {
+      grid-template-columns: 1fr;
+      gap: 44px;
+    }
+
+    .offset-right,
+    .offset-left {
+      width: 100%;
+    }
+
+    .text-moment {
+      padding: 64px 0;
+      max-width: 100%;
+    }
+  }
+</style>
