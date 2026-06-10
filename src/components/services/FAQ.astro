@@ -1,0 +1,94 @@
+---
+import { FAQ_ITEMS } from "../../content/services";
+---
+
+<section class="bg-brand-surface px-6 py-16 md:py-24 section-rule">
+  <div class="max-w-6xl mx-auto">
+
+    <h2 style="font-family:var(--font-serif); font-size:clamp(2rem,3.2vw,2.75rem); line-height:1.1; font-weight:400; letter-spacing:-0.02em; color:#111111; margin:0 0 48px;">
+      Common questions
+    </h2>
+
+    <div class="faq-list">
+      {FAQ_ITEMS.map((item, i) => (
+        <details open={i === 0 ? true : undefined}>
+          <summary>
+            <span class="faq-question">{item.question}</span>
+            <span class="faq-indicator" aria-hidden="true"></span>
+          </summary>
+          <div class="faq-answer">
+            <p>{item.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  details {
+    border-top: 1px solid rgba(17, 17, 17, 0.08);
+  }
+
+  details:last-child {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  }
+
+  details summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 24px;
+    padding: 24px 0;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .faq-question {
+    font-family: var(--font-serif);
+    font-size: clamp(1.1rem, 1.8vw, 1.25rem);
+    line-height: 1.25;
+    color: #111111;
+    font-weight: 400;
+  }
+
+  .faq-indicator {
+    flex-shrink: 0;
+    font-size: 1.25rem;
+    line-height: 1;
+    color: rgba(17, 17, 17, 0.45);
+    font-weight: 300;
+    width: 20px;
+    text-align: right;
+  }
+
+  .faq-indicator::before {
+    content: "+";
+  }
+
+  details[open] .faq-indicator::before {
+    content: "−";
+  }
+
+  .faq-answer {
+    padding: 0 40px 28px 0;
+    max-width: 60ch;
+  }
+
+  .faq-answer p {
+    font-size: 16px;
+    color: rgba(17, 17, 17, 0.65);
+    line-height: 1.7;
+    margin: 0;
+  }
+</style>

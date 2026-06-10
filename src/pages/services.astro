@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import CoreCare from "../components/services/CoreCare.astro";
+import MemoryCareBand from "../components/services/MemoryCareBand.astro";
+import WhoWeServe from "../components/services/WhoWeServe.astro";
+import FAQ from "../components/services/FAQ.astro";
+import CTABanner from "../components/shared/CTABanner.astro";
+import { SERVICES_HERO } from "../content/services";
+import { SITE_NAME } from "../content/site";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: SITE_NAME,
+  description: SERVICES_HERO.description,
+};
+---
+
+<BaseLayout
+  title="Services"
+  description="Full daily care at Lulu's Care in Everett, WA — personal care, memory & dementia specialty, meals, medication support, and more."
+  schema={schema}
+>
+
+  <!-- 1. Page title block -->
+  <section class="px-6 pt-28 pb-10 md:pt-32 md:pb-12" style="border-bottom:1px solid rgba(17,17,17,0.08);">
+    <div class="max-w-6xl mx-auto">
+      <h1 style="font-family:var(--font-serif); font-size:clamp(2.5rem,5vw,4rem); line-height:1.05; font-weight:400; letter-spacing:-0.02em; color:#111111; margin:0 0 16px;">
+        {SERVICES_HERO.title}
+      </h1>
+      <p style="font-size:18px; color:rgba(17,17,17,0.60); line-height:1.65; max-width:52ch; margin:0;">
+        {SERVICES_HERO.description}
+      </p>
+    </div>
+  </section>
+
+  <!-- 2. Core care — sticky sidebar -->
+  <CoreCare />
+
+  <!-- 3. Memory & dementia care — dark band -->
+  <MemoryCareBand />
+
+  <!-- 4. Who we serve — two-column lists -->
+  <WhoWeServe />
+
+  <!-- 5. FAQ — editorial accordion -->
+  <FAQ />
+
+  <!-- 6. CTA band -->
+  <CTABanner
+    title="Not sure what care is right?"
+    description="Call us — we'll talk through your situation honestly, even if we're not the right fit."
+  />
+
+</BaseLayout>

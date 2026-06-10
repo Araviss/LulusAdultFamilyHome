@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/shared/PageHero.astro";
+import TizitaStory from "../components/about/TizitaStory.astro";
+import TheHome from "../components/about/TheHome.astro";
+import OurValues from "../components/about/OurValues.astro";
+import CTABanner from "../components/shared/CTABanner.astro";
+import { ABOUT_HERO } from "../content/about";
+import { SITE_NAME } from "../content/site";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: SITE_NAME,
+  description:
+    "Learn about Lulu's Care Adult Family Home in Everett, WA — our caregiver Tizita, our home, and our approach to personalized care.",
+};
+---
+
+<BaseLayout
+  title="About"
+  description="Learn about Lulu's Care Adult Family Home in Everett, WA — our caregiver Tizita, our home, and our approach to personalized care."
+  schema={schema}
+>
+  <PageHero
+    label={ABOUT_HERO.label}
+    title={ABOUT_HERO.title}
+    highlight={ABOUT_HERO.highlight}
+    description={ABOUT_HERO.description}
+    compact={true}
+    image={ABOUT_HERO.image}
+    imageAlt={ABOUT_HERO.imageAlt}
+    imageCaption={ABOUT_HERO.imageCaption}
+  />
+  <TizitaStory />
+  <TheHome />
+  <OurValues />
+  <CTABanner
+    title="Want to see the home in person?"
+    description="We're happy to walk you through the space and answer questions — no commitment."
+  />
+</BaseLayout>

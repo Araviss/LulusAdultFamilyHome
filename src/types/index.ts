@@ -50,6 +50,12 @@ export interface FaqItem {
   answer: string;
 }
 
+export interface ServiceCluster {
+  heading: string;
+  body: string;
+  placeholder?: string;
+}
+
 export interface ContactFormData {
   name: string;
   email: string;

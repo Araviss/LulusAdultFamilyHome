@@ -1,0 +1,54 @@
+---
+import { TIZITA } from "../../content/about";
+---
+
+<section class="bg-white px-6 py-16 md:py-24 section-rule">
+  <div class="max-w-6xl mx-auto">
+
+    <div class="grid grid-cols-1 md:grid-cols-[45fr_55fr] gap-12 md:gap-16 items-start">
+
+      <!-- Photo -->
+      <div style="max-width:460px;">
+        <div style="aspect-ratio:4/5; border-radius:16px; overflow:hidden; background:#EAE7E1;">
+          <img
+            src={TIZITA.image}
+            alt={TIZITA.imageAlt}
+            style="width:100%; height:100%; object-fit:cover; display:block;"
+            loading="eager"
+          />
+        </div>
+      </div>
+
+      <!-- Text -->
+      <div style="display:flex; flex-direction:column; gap:20px; padding-top:8px;">
+
+        <div style="display:flex; flex-direction:column; gap:10px;">
+<h2 style="font-family:var(--font-serif); font-size:clamp(2rem,3.5vw,2.75rem); line-height:1.1; letter-spacing:-0.02em; font-weight:400; color:#111111; margin:0;">
+            {TIZITA.heading}
+          </h2>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          {TIZITA.paragraphs.map((p) => (
+            <p style="font-size:17px; color:rgba(17,17,17,0.72); line-height:1.65; margin:0;">{p}</p>
+          ))}
+          <p style="font-size:17px; color:rgba(17,17,17,0.72); line-height:1.65; margin:0;">{TIZITA.credentials}</p>
+        </div>
+
+        <!-- Pull stats -->
+        <div style="margin-top:8px; padding-top:24px; border-top:1px solid rgba(17,17,17,0.08); display:flex; gap:32px;">
+          <div>
+            <div style="font-family:var(--font-serif); font-size:2rem; color:#111111; line-height:1;">2018</div>
+            <div style="font-size:13px; color:rgba(17,17,17,0.5); margin-top:4px;">Caring since</div>
+          </div>
+          <div>
+            <div style="font-family:var(--font-serif); font-size:2rem; color:#111111; line-height:1;">6</div>
+            <div style="font-size:13px; color:rgba(17,17,17,0.5); margin-top:4px;">Residents, max</div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>

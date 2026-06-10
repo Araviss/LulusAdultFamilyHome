@@ -1,0 +1,30 @@
+---
+import { VALUES } from "../../content/about";
+---
+
+<section class="bg-brand-surface px-6 py-16 md:py-24 section-rule">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Header -->
+    <div style="margin-bottom:48px;">
+<h2 style="font-family:var(--font-serif); font-size:clamp(1.75rem,3vw,2.5rem); line-height:1.1; letter-spacing:-0.02em; font-weight:400; color:#111111; margin:0;">
+        How we think about care
+      </h2>
+    </div>
+
+    <!-- 2-column grid -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px 72px;">
+      {VALUES.map((value) => (
+        <div style="display:flex; flex-direction:column; gap:12px;">
+          <h3 style="font-family:var(--font-serif); font-size:1.125rem; line-height:1.2; font-weight:600; color:#111111; margin:0;">
+            {value.title}
+          </h3>
+          <p style="font-size:15px; color:rgba(17,17,17,0.65); line-height:1.65; margin:0;">
+            {value.description}
+          </p>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
