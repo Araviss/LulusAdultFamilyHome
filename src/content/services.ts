@@ -3,22 +3,22 @@ import type { FaqItem, ServiceCluster } from "../types";
 export const SERVICES_HERO = {
   title: "Care built around each resident",
   description:
-    "Every service here is part of daily life at Lulu's — included as standard, not an add-on.",
+    "Everything on this page is included for every resident.",
 };
 
 export const CORE_CARE_INTRO = {
   heading: "What daily care includes",
-  body: "Every resident receives full daily support as part of living at Lulu's. Nothing listed here is an add-on or upcharge — it is simply what care looks like in this home.",
+  body: "Every resident receives full daily support as part of living at Lulu's. All of it is included in the monthly cost.",
 };
 
 export const CORE_CLUSTERS: ServiceCluster[] = [
   {
     heading: "Personal care",
-    body: "Bathing, dressing, grooming, mobility assistance, and toileting — handled with patience and dignity, adapted to each resident's abilities and preferences.",
+    body: "Bathing, dressing, grooming, mobility assistance, and toileting, handled with patience and dignity and adapted to each resident's abilities and preferences.",
   },
   {
     heading: "Health & medication support",
-    body: "Medication management and reminders, coordination with doctors, pharmacies, and visiting providers. Health changes are noticed early because the same people provide care every day. We work with visiting nurses and outside providers for specialized medical needs — if you have questions about a specific condition, ask us directly.",
+    body: "Medication management and reminders, coordination with doctors, pharmacies, and visiting providers. Health changes are noticed early because the same people provide care every day. We work with visiting nurses and outside providers for specialized medical needs. If you have questions about a specific condition, ask us directly.",
   },
   {
     heading: "Daily life",
@@ -33,8 +33,8 @@ export const CORE_CLUSTERS: ServiceCluster[] = [
 export const MEMORY_CARE = {
   heading: "Memory & dementia care",
   paragraphs: [
-    "This is the home's specialty. Tizita's experience is grounded in dementia and memory care — it is built into how this home operates, not layered on as an option. [PLACEHOLDER — specialty training claim pending owner confirmation. Do not invent licensing or credential claims.]",
-    "The environment is designed to help: predictable daily routines, a calm residential setting, and a small number of residents who come to know each other and the space. For people with memory loss, familiarity is not a comfort — it is care.",
+    "This is the home's specialty. Tizita's experience is grounded in dementia and memory care, built into how this home operates. [PLACEHOLDER — specialty training claim pending owner confirmation. Do not invent licensing or credential claims.]",
+    "The environment is designed to help: predictable daily routines, a calm residential setting, and a small number of residents who come to know each other and the space. For people with memory loss, familiarity is not a comfort. It is care.",
     "Families are kept informed as needs change. If a resident's condition shifts, we communicate directly and adjust care accordingly.",
   ],
 };
@@ -42,7 +42,7 @@ export const MEMORY_CARE = {
 export const WHO_WE_SERVE = {
   heading: "Who we serve",
   intro:
-    "Honest fit matters more than a sales pitch — here is who tends to do well at Lulu's.",
+    "Here's who tends to do well at Lulu's, and who may need a different setting.",
   goodFit: {
     heading: "We're a good fit for",
     items: [
@@ -67,12 +67,12 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "What's included in the monthly cost?",
     answer:
-      "Daily personal care, three home-cooked meals, snacks and beverages throughout the day, housekeeping, laundry, and linens are all included. There are no surprise add-ons for standard daily care — what we describe is what is covered.",
+      "Daily personal care, three home-cooked meals, snacks and beverages throughout the day, housekeeping, laundry, and linens are all included. There are no surprise add-ons for standard daily care. What we describe is what is covered.",
   },
   {
     question: "How does pricing work?",
     answer:
-      "Cost is assessed individually based on each resident's care needs — it is not a flat rate. We would rather have that conversation directly than quote a number that does not reflect your situation. Call us and we will walk through it honestly.",
+      "Cost is assessed individually based on each resident's care needs, not a flat rate. We would rather have that conversation directly than quote a number that does not reflect your situation. Call us and we will walk through it honestly.",
   },
   {
     question: "Do you accept Medicaid?",

@@ -28,7 +28,7 @@ export const CARE_PILLARS: CarePillar[] = [
     shortTitle: "Care That Knows You",
     title: "Personalized Attention",
     lede: "Every person receives care built around their individual needs, preferences, and daily rhythm.",
-    description: "You will always reach someone who knows your loved one by name, not a shift supervisor reading from a chart.",
+    description: "You will always reach someone who knows your loved one by name, their routines, and what a good day looks like for them.",
     // VERIFIED: "6 residents max" — CONFIRM WITH OWNER: "Individual care plans", "Families always welcome"
     detail: "Small home setting · Tailored to each person · Families always welcome",
     image: "/images/bedroom.jpg", // TODO: swap for environmental or hands-based photo

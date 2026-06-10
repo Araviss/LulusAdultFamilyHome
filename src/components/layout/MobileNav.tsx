@@ -23,7 +23,7 @@ export default function MobileNav({ links }: Props) {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-[9998] bg-brand-white pt-20 flex flex-col"
+          className="fixed top-20 left-0 right-0 bottom-0 z-[9998] bg-brand-white flex flex-col"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"

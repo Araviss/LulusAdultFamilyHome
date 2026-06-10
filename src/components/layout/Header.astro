@@ -32,10 +32,10 @@ const currentPath = Astro.url.pathname;
     </nav>
 
     <a
-      href={`tel:${PHONE}`}
+      href="/contact"
       class="hidden md:inline-flex items-center gap-2 bg-brand-sage text-brand-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-brand-terra transition-colors duration-200 min-h-[44px]"
     >
-      {PHONE}
+      Get in touch
     </a>
 
     <MobileNav links={NAV_LINKS} client:load />

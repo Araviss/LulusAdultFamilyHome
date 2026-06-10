@@ -1,0 +1,181 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ContactForm from "../components/contact/ContactForm";
+import { PHONE, EMAIL } from "../content/site";
+---
+
+<BaseLayout
+  title="Contact"
+  description="Get in touch with Lulu's Care in Everett, WA — call, email, or send a message about care for your loved one."
+>
+
+  <!-- 1. Title block -->
+  <section class="title-block">
+    <div class="inner">
+      <h1 class="page-heading">Let's talk</h1>
+      <p class="page-sub">A first conversation is just that — your situation, your questions, no commitment.</p>
+    </div>
+  </section>
+
+  <!-- 2. Contact section -->
+  <section class="contact-section">
+    <div class="inner contact-grid">
+
+      <!-- Left: human side -->
+      <div class="left-col">
+
+        <p class="intro-para">
+          Call or send a message. You'll talk directly with Tizita. Most messages get a response the same day.
+        </p>
+
+        <div style="margin-top:40px;">
+          <div class="contact-detail-label">Phone</div>
+          <a
+            href={`tel:${PHONE}`}
+            class="phone-link"
+          >
+            {PHONE}
+          </a>
+        </div>
+
+        <div style="margin-top:32px;">
+          <div class="contact-detail-label">Email</div>
+          <a
+            href={`mailto:${EMAIL}`}
+            class="email-link"
+          >
+            {EMAIL}
+          </a>
+        </div>
+
+        <div style="margin-top:32px;">
+          <p class="location-line">
+            Everett, WA — a quiet residential neighborhood. We share the exact address when we schedule your visit.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Right: form -->
+      <div class="right-col">
+        <h2 class="form-heading">Send a message</h2>
+        <ContactForm client:load />
+      </div>
+
+    </div>
+  </section>
+
+</BaseLayout>
+
+<style>
+  /* ─── Title block ─── */
+  .title-block {
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+    padding: 112px 24px 40px;
+  }
+
+  .inner {
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  .page-heading {
+    font-family: var(--font-serif);
+    font-size: clamp(2.5rem, 5vw, 2.75rem);
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #111111;
+    margin: 0 0 16px;
+  }
+
+  .page-sub {
+    font-size: 18px;
+    color: rgba(17, 17, 17, 0.60);
+    line-height: 1.65;
+    max-width: 48ch;
+    margin: 0;
+  }
+
+  /* ─── Contact section ─── */
+  .contact-section {
+    padding: 56px 24px 80px;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  @media (min-width: 768px) {
+    .contact-grid {
+      grid-template-columns: 40fr 55fr;
+      gap: 80px;
+    }
+  }
+
+  /* ─── Left column ─── */
+  .intro-para {
+    font-size: 17px;
+    color: rgba(17, 17, 17, 0.72);
+    line-height: 1.65;
+    max-width: 50ch;
+    margin: 0;
+  }
+
+  .contact-detail-label {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(17, 17, 17, 0.40);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .phone-link {
+    font-family: var(--font-serif);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    color: #111111;
+    text-decoration: none;
+    line-height: 1.1;
+    display: block;
+    transition: color 0.15s;
+  }
+
+  .phone-link:hover {
+    color: var(--color-brand-sage);
+  }
+
+  .email-link {
+    font-size: 17px;
+    color: rgba(17, 17, 17, 0.75);
+    text-decoration: none;
+    display: block;
+    transition: color 0.15s;
+    word-break: break-all;
+  }
+
+  .email-link:hover {
+    color: var(--color-brand-sage);
+  }
+
+  .location-line {
+    font-size: 15px;
+    color: rgba(17, 17, 17, 0.45);
+    line-height: 1.6;
+    margin: 0;
+    max-width: 44ch;
+  }
+
+  /* ─── Right column ─── */
+  .form-heading {
+    font-family: var(--font-serif);
+    font-size: 1.375rem;
+    font-weight: 400;
+    color: #111111;
+    letter-spacing: -0.01em;
+    margin: 0 0 32px;
+  }
+</style>

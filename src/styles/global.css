@@ -68,3 +68,42 @@
     border-top: 1px solid rgba(17, 17, 17, 0.08);
   }
 }
+
+/* ─── Contact form ─── */
+.contact-label {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(17, 17, 17, 0.42);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.contact-field {
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid rgba(17, 17, 17, 0.18);
+  background: transparent;
+  border-radius: 0;
+  padding: 10px 0;
+  font-size: 17px;
+  color: #111111;
+  outline: none;
+  font-family: var(--font-sans);
+  transition: border-color 0.15s;
+  resize: vertical;
+  box-shadow: none;
+  -webkit-appearance: none;
+}
+
+.contact-field:focus {
+  border-bottom: 2px solid var(--color-brand-sage);
+}
+
+.contact-error {
+  font-size: 13px;
+  color: rgba(17, 17, 17, 0.55);
+  margin-top: 6px;
+}

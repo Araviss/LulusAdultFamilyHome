@@ -7,16 +7,16 @@ export const ABOUT_HERO = {
   image: "/images/hero.jpg",
   imageAlt: "A caregiver sharing a warm moment with an older adult outdoors",
   description:
-    "Licensed, inspected, and intentionally small — Lulu's Care exists because we believe the best care happens in a real home, not a facility.",
+    "Licensed, inspected, and intentionally small. Care built around six residents in a real Everett home.",
 };
 
 export const TIZITA = {
   eyebrow: "Our Caregiver",
   heading: "Meet Tizita",
   paragraphs: [
-    "I became a professional caregiver in 2018, and most of that time was spent in memory and dementia care. Working in larger settings taught me a lot — but it also showed me what those settings couldn't give: the time and consistency that real relationships require.",
+    "I became a professional caregiver in 2018, and most of that time was spent in memory and dementia care. Working in larger settings taught me a lot, but it also showed me what those settings couldn't give: the time and consistency that real relationships require.",
     "I opened Lulu's Care because I wanted to create something I could genuinely stand behind. A place where families don't have to wonder whether their loved one is known — where every caregiver knows each resident's name, their routines, and what a good day looks like for them.",
-    "The home is small by design. Six residents is not a limitation — it's how we do this well.",
+    "The home is small by design. Six residents is not a limitation. It's how we do this well.",
   ],
   credentials: "[Certifications / training — pending from Tizita]",
   // REPLACE WITH REAL PHOTO — portrait orientation preferred
@@ -28,7 +28,7 @@ export const THE_HOME = {
   eyebrow: "Our Space",
   heading: "A real home in Everett",
   description:
-    "Lulu's Care is a licensed adult family home in a quiet residential neighborhood in Everett, WA. It looks like a home because it is one.",
+    "Lulu's Care is a licensed adult family home in a quiet residential neighborhood in Everett, WA.",
   details: [
     // CONFIRM WITH OWNER: verify all details before publishing
     { label: "Capacity", value: "Up to 6 residents" },
@@ -37,8 +37,8 @@ export const THE_HOME = {
     { label: "Rooms", value: "Private & semi-private available" },
   ],
   body: [
-    "Rooms are private or semi-private, and shared spaces — the living room, dining room, kitchen — are designed to feel residential. This isn't a hallway with numbered doors. Meals happen around the same table. Mornings follow a rhythm residents come to rely on.",
-    "Outdoor access and a safe, familiar environment are part of daily life, not an amenity.",
+    "Rooms are private or semi-private, and shared spaces (the living room, dining room, and kitchen) are designed to feel residential. Meals happen around the same table. Mornings follow a rhythm residents come to rely on.",
+    "Outdoor access and a safe, familiar environment are part of daily life.",
   ],
   // TODO: replace with real photo — exterior, living room, or backyard
   image: "",
@@ -55,13 +55,13 @@ export const VALUES: Value[] = [
   {
     title: "Consistency over shifts",
     description:
-      "The same home, the same routines, the same familiar faces. For people with memory needs especially, a stable environment isn't a comfort — it's care.",
+      "The same home, the same routines, the same familiar faces. For people with memory needs especially, that consistency matters in ways that are hard to overstate.",
     icon: "clock",
   },
   {
     title: "Always kept in the loop",
     description:
-      "Families receive regular updates and are included in care decisions. You can reach us any time with questions — we'd rather over-communicate than leave you guessing.",
+      "Families receive regular updates and are included in care decisions. You can reach us any time with questions. We'd rather over-communicate than leave you guessing.",
     icon: "users",
   },
   {
