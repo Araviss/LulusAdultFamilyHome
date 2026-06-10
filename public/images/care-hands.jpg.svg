@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#E8E5DF"/>
+  <rect x="1" y="1" width="798" height="598" fill="none" stroke="#C8C4BC" stroke-width="2" stroke-dasharray="12 6"/>
+  <path d="M380 260 C360 240 330 245 320 265 C310 285 325 305 345 295 L400 330 L455 295 C475 305 490 285 480 265 C470 245 440 240 420 260 L400 278 Z" fill="#B0A898" opacity="0.5"/>
+  <text x="400" y="390" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#888880" letter-spacing="0.5">care-hands.jpg</text>
+  <text x="400" y="415" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#AAAAAA">Replace with: caregiver hands / close-up, no faces</text>
+</svg>

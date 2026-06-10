@@ -5,7 +5,7 @@ import MobileNav from "./MobileNav";
 const currentPath = Astro.url.pathname;
 ---
 
-<header class="sticky top-0 z-50 bg-brand-cream/95 backdrop-blur-sm section-rule">
+<header id="site-header" class="sticky top-0 z-50 border-b border-brand-black/[0.08]" style="background: rgba(250,248,244,0.96); backdrop-filter: blur(8px);">
   <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
 
     <a href="/" class="flex items-center gap-2.5" aria-label={`${SITE_NAME} home`}>
@@ -13,8 +13,8 @@ const currentPath = Astro.url.pathname;
         <path d="M16 3L3 13v16h9v-9h8v9h9V13L16 3z" fill="var(--color-brand-sage)" />
       </svg>
       <span class="flex flex-col leading-none">
-        <span class="text-base font-semibold text-brand-brown" style="font-family: var(--font-serif)">Lulu's Care</span>
-        <span class="text-[11px] text-brand-muted tracking-wide">Adult Family Home</span>
+        <span class="text-base font-semibold text-brand-black" style="font-family: var(--font-serif)">Lulu's Care</span>
+        <span class="text-[11px] tracking-wide text-brand-muted">Adult Family Home</span>
       </span>
     </a>
 
@@ -23,7 +23,7 @@ const currentPath = Astro.url.pathname;
         <a
           href={link.href}
           class={`text-sm font-medium transition-colors duration-200 hover:text-brand-sage ${
-            currentPath === link.href ? "text-brand-brown" : "text-brand-brown/65"
+            currentPath === link.href ? "font-semibold" : ""
           }`}
         >
           {link.label}
@@ -33,7 +33,7 @@ const currentPath = Astro.url.pathname;
 
     <a
       href={`tel:${PHONE}`}
-      class="hidden md:inline-flex items-center gap-2 bg-brand-sage text-brand-cream text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-brand-terra transition-colors duration-200"
+      class="hidden md:inline-flex items-center gap-2 bg-brand-sage text-brand-white text-sm font-semibold px-5 py-2.5 rounded-lg hover:bg-brand-terra transition-colors duration-200 min-h-[44px]"
     >
       {PHONE}
     </a>
@@ -41,3 +41,4 @@ const currentPath = Astro.url.pathname;
     <MobileNav links={NAV_LINKS} client:load />
   </div>
 </header>
+

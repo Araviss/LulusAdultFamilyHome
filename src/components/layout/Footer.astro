@@ -1,10 +1,10 @@
 ---
-import { NAV_LINKS, SITE_NAME, PHONE, EMAIL, ADDRESS } from "../../content/site";
+import { NAV_LINKS, SITE_NAME, PHONE, EMAIL, ADDRESS, LICENSE_NUMBER } from "../../content/site";
 
 const year = new Date().getFullYear();
 ---
 
-<footer class="section-rule bg-brand-surface px-6 py-14">
+<footer class="px-6 py-14" style="background-color: #1E2620;">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
 
     <div class="flex flex-col gap-3">
@@ -12,10 +12,12 @@ const year = new Date().getFullYear();
         <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <path d="M16 3L3 13v16h9v-9h8v9h9V13L16 3z" fill="var(--color-brand-sage)" />
         </svg>
-        <span class="font-semibold text-brand-brown" style="font-family: var(--font-serif)">Lulu's Care</span>
+        <span class="font-semibold" style="color: rgba(255,255,255,0.9); font-family: var(--font-serif)">Lulu's Care</span>
       </a>
-      <p class="text-sm text-brand-muted leading-relaxed">
-        Licensed Adult Family Home<br />{ADDRESS.city}, {ADDRESS.state}
+      <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.45);">
+        A licensed adult family home in {ADDRESS.city}, {ADDRESS.state}.
+        {LICENSE_NUMBER && <><br />License #{LICENSE_NUMBER}</>}
+        {!LICENSE_NUMBER && <><br />License # on file with DSHS</>}
       </p>
     </div>
 
@@ -23,7 +25,8 @@ const year = new Date().getFullYear();
       {NAV_LINKS.map((link) => (
         <a
           href={link.href}
-          class="text-sm text-brand-brown/60 hover:text-brand-sage transition-colors duration-200"
+          class="text-sm transition-colors duration-200 hover:text-brand-sage"
+          style="color: rgba(255,255,255,0.7);"
         >
           {link.label}
         </a>
@@ -31,19 +34,27 @@ const year = new Date().getFullYear();
     </nav>
 
     <div class="flex flex-col gap-3 text-sm">
-      <a href={`tel:${PHONE}`} class="text-brand-brown/70 hover:text-brand-sage transition-colors duration-200">
+      <a
+        href={`tel:${PHONE}`}
+        class="transition-colors duration-200 hover:text-brand-sage"
+        style="color: rgba(255,255,255,0.7);"
+      >
         {PHONE}
       </a>
-      <a href={`mailto:${EMAIL}`} class="text-brand-brown/70 hover:text-brand-sage transition-colors duration-200 break-all">
+      <a
+        href={`mailto:${EMAIL}`}
+        class="transition-colors duration-200 hover:text-brand-sage break-all"
+        style="color: rgba(255,255,255,0.7);"
+      >
         {EMAIL}
       </a>
     </div>
 
   </div>
 
-  <div class="max-w-6xl mx-auto mt-10 pt-6 section-rule">
-    <p class="text-xs text-brand-muted">
-      &copy; {year} {SITE_NAME}. Site by <a href="https://stackbyte.co" class="hover:text-brand-sage transition-colors duration-200">Stackbyte</a>.
+  <div class="max-w-6xl mx-auto mt-10 pt-6" style="border-top: 1px solid rgba(255,255,255,0.1);">
+    <p class="text-xs" style="color: rgba(255,255,255,0.45);">
+      &copy; {year} {SITE_NAME}. Site by <a href="https://stackbyte.co" class="hover:text-white/60 transition-colors duration-200">Stackbyte</a>.
     </p>
   </div>
 </footer>

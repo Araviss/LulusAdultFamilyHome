@@ -1,0 +1,52 @@
+---
+import { HERO } from "../../content/home";
+
+const { headline, subtext, primaryCTA, secondaryCTA } = HERO;
+---
+
+<section class="relative min-h-[75vh] flex items-end overflow-hidden">
+
+  <!-- Background image -->
+  <img
+    src="/images/hero.jpg"
+    alt=""
+    aria-hidden="true"
+    class="absolute inset-0 w-full h-full object-cover object-center"
+    loading="eager"
+  />
+
+  <!-- Functional dark overlay for contrast — required for WCAG AA -->
+  <div
+    class="absolute inset-0"
+    style="background: linear-gradient(to right, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.40) 55%, rgba(0,0,0,0.10) 100%), linear-gradient(to top, rgba(0,0,0,0.70) 0%, rgba(0,0,0,0.20) 60%, transparent 100%)"
+    aria-hidden="true"
+  ></div>
+
+  <!-- Content -->
+  <div class="relative w-full max-w-6xl mx-auto px-8 pb-16 md:pb-20">
+    <div class="flex flex-col gap-6 max-w-[640px]">
+
+      <div class="flex flex-col gap-4">
+        <h1 class="text-hero text-white">{headline}</h1>
+        <p class="text-[17px] text-white/75 leading-relaxed">{subtext}</p>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <a
+          href={primaryCTA.href}
+          class="inline-flex items-center justify-center bg-brand-sage text-white font-semibold px-7 py-3 rounded-lg hover:bg-brand-terra transition-colors duration-200 text-sm min-h-[44px]"
+        >
+          {primaryCTA.label}
+        </a>
+        <a
+          href={secondaryCTA.href}
+          class="inline-flex items-center justify-center text-white font-medium px-7 py-3 rounded-lg border border-white/70 bg-white/[0.12] hover:bg-white/20 transition-colors duration-200 text-sm min-h-[44px]"
+        >
+          {secondaryCTA.label}
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</section>

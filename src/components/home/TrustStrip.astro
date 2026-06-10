@@ -1,0 +1,17 @@
+---
+import { TRUST_SIGNALS } from "../../content/home";
+---
+
+<section class="bg-brand-paper px-6 py-10" style="border-top:1px solid rgba(17,17,17,0.08); border-bottom:1px solid rgba(17,17,17,0.08);">
+  <ul
+    class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-3 list-none"
+    data-testid="trust-strip"
+  >
+    {TRUST_SIGNALS.map((signal, i) => (
+      <li class={`flex flex-col gap-1 px-6 py-4 sm:py-2 ${i > 0 ? "sm:border-l border-brand-black/10 border-t sm:border-t-0" : ""}`}>
+        <span class="font-semibold text-brand-black text-base leading-tight">{signal.value}</span>
+        <span class="text-sm text-brand-muted leading-snug">{signal.label}</span>
+      </li>
+    ))}
+  </ul>
+</section>

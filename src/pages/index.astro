@@ -1,9 +1,31 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import HeroSection from "../components/home/HeroSection.astro";
+import TrustStrip from "../components/home/TrustStrip.astro";
+import CareHighlights from "../components/home/CareHighlights.astro";
+import Testimonial from "../components/home/Testimonial.astro";
+import CTABanner from "../components/shared/CTABanner.astro";
+import { SITE_NAME, SITE_DESCRIPTION } from "../content/site";
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  name: SITE_NAME,
+  description: SITE_DESCRIPTION,
+  telephone: "206-372-1541",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Everett",
+    addressRegion: "WA",
+    addressCountry: "US",
+  },
+};
 ---
 
-<BaseLayout title="Home">
-  <section class="min-h-[60vh] flex items-center justify-center px-6">
-    <p class="text-brand-muted text-lg">Coming soon.</p>
-  </section>
+<BaseLayout title="Home" schema={schema}>
+  <HeroSection />
+  <TrustStrip />
+  <CareHighlights />
+  <Testimonial />
+  <CTABanner />
 </BaseLayout>

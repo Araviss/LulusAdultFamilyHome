@@ -13,13 +13,16 @@ export interface CareService {
 export interface TrustSignal {
   value: string;
   label: string;
-  icon: string;
 }
 
 export interface CarePillar {
+  shortTitle: string;
   title: string;
+  lede: string;
   description: string;
-  icon: string;
+  detail: string;
+  image: string;
+  imageAlt: string;
 }
 
 export interface Testimonial {

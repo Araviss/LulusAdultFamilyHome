@@ -1,0 +1,24 @@
+---
+import { TESTIMONIAL } from "../../content/home";
+---
+
+<section class="bg-brand-paper px-6 py-16 md:py-20 section-rule">
+  <div class="max-w-3xl mx-auto">
+
+    <blockquote
+      class="flex flex-col items-center gap-5 text-center"
+      style="background:#ffffff; border-radius:16px; padding:48px 56px; box-shadow:0 1px 3px rgba(0,0,0,0.06);"
+    >
+      <span style="font-family:var(--font-serif); font-size:64px; line-height:1; color:var(--color-brand-sage); opacity:0.35; margin-bottom:-12px;" aria-hidden="true">"</span>
+      <p class="text-xl md:text-2xl text-brand-black leading-relaxed" style="font-family: var(--font-serif)">
+        {TESTIMONIAL.quote}
+      </p>
+      <footer>
+        <cite class="not-italic text-sm text-brand-muted">
+          {TESTIMONIAL.author}, {TESTIMONIAL.relationship}
+        </cite>
+      </footer>
+    </blockquote>
+
+  </div>
+</section>

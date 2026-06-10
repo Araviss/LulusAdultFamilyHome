@@ -16,14 +16,14 @@ export default function MobileNav({ links }: Props) {
         onClick={() => setIsOpen((prev) => !prev)}
         aria-label={isOpen ? "Close menu" : "Open menu"}
         aria-expanded={isOpen}
-        className="p-2 border border-brand-brown/20 rounded-md hover:border-brand-sage hover:text-brand-sage transition-colors duration-200"
+        className="p-2 border border-brand-black/20 rounded-md hover:border-brand-sage hover:text-brand-sage transition-colors duration-200"
       >
         {isOpen ? <X size={20} /> : <Menu size={20} />}
       </button>
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-[9998] bg-brand-cream pt-20 flex flex-col"
+          className="fixed inset-0 z-[9998] bg-brand-white pt-20 flex flex-col"
           role="dialog"
           aria-modal="true"
           aria-label="Mobile navigation"
@@ -34,7 +34,7 @@ export default function MobileNav({ links }: Props) {
                 key={link.href}
                 href={link.href}
                 onClick={close}
-                className="text-2xl font-semibold py-4 border-b border-brand-brown/10 hover:text-brand-sage transition-colors duration-200"
+                className="text-2xl font-semibold py-4 border-b border-brand-black/10 hover:text-brand-sage transition-colors duration-200"
                 style={{ fontFamily: "var(--font-serif)" }}
               >
                 {link.label}
@@ -45,7 +45,7 @@ export default function MobileNav({ links }: Props) {
             <a
               href="/contact"
               onClick={close}
-              className="block w-full text-center bg-brand-sage text-brand-cream font-semibold px-6 py-4 rounded-lg hover:bg-brand-terra transition-colors duration-200 text-lg"
+              className="block w-full text-center bg-brand-sage text-brand-white font-semibold px-6 py-4 rounded-lg hover:bg-brand-terra transition-colors duration-200 text-lg"
             >
               Schedule a Tour
             </a>

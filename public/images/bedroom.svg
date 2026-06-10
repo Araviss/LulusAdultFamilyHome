@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#EAE7E1"/>
+  <rect x="1" y="1" width="798" height="598" fill="none" stroke="#C8C4BC" stroke-width="2" stroke-dasharray="12 6"/>
+  <rect x="260" y="290" width="280" height="140" rx="6" fill="#C8C4BC" opacity="0.5"/>
+  <rect x="260" y="270" width="280" height="30" rx="4" fill="#B0A898" opacity="0.5"/>
+  <rect x="260" y="300" width="60" height="50" rx="3" fill="#D4D0C8" opacity="0.6"/>
+  <rect x="480" y="300" width="60" height="50" rx="3" fill="#D4D0C8" opacity="0.6"/>
+  <rect x="230" y="420" width="20" height="20" fill="#B0A898" opacity="0.5"/>
+  <rect x="550" y="420" width="20" height="20" fill="#B0A898" opacity="0.5"/>
+  <text x="400" y="480" text-anchor="middle" font-family="Georgia, serif" font-size="15" fill="#888880" letter-spacing="0.5">bedroom.jpg</text>
+  <text x="400" y="505" text-anchor="middle" font-family="system-ui, sans-serif" font-size="12" fill="#AAAAAA">Replace with: cozy resident room, warm light, no faces</text>
+</svg>

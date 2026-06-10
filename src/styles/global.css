@@ -2,16 +2,18 @@
 
 @theme {
   /* Brand colors */
-  --color-brand-cream: #fdf8f3;
-  --color-brand-brown: #2c2420;
+  --color-brand-white: #ffffff;
+  --color-brand-black: #111111;
   --color-brand-sage: #7a9e7e;
   --color-brand-terra: #c4956a;
-  --color-brand-surface: #f5ece2;
-  --color-brand-muted: #9c8a7a;
+  --color-brand-surface: #F5F4F1;
+  --color-brand-paper: #FAF8F4;
+  --color-brand-muted: #888888;
+  --color-brand-footer: #1E2620;
 
   /* Semantic aliases */
-  --color-background: var(--color-brand-cream);
-  --color-foreground: var(--color-brand-brown);
+  --color-background: var(--color-brand-paper);
+  --color-foreground: var(--color-brand-black);
   --color-primary: var(--color-brand-sage);
   --color-secondary: var(--color-brand-terra);
 
@@ -26,9 +28,11 @@
   }
 
   body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
+    background-color: var(--color-brand-paper);
+    color: var(--color-brand-black);
     font-family: var(--font-sans);
+    font-size: 17px;
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     overflow-x: hidden;
   }
@@ -40,7 +44,7 @@
     font-size: clamp(3rem, 7vw, 6rem);
     line-height: 1.05;
     font-weight: 400;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
   }
 
   .text-display-sm {
@@ -48,26 +52,19 @@
     font-size: clamp(2rem, 4vw, 3.5rem);
     line-height: 1.1;
     font-weight: 400;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
+  }
+
+  /* Hero-specific headline — larger than display-sm, desktop 64–72px */
+  .text-hero {
+    font-family: var(--font-serif);
+    font-size: clamp(2.25rem, 5.5vw, 4.5rem);
+    line-height: 1.05;
+    font-weight: 400;
+    letter-spacing: -0.02em;
   }
 
   .section-rule {
-    border-top: 1px solid color-mix(in srgb, var(--color-brand-brown) 12%, transparent);
-  }
-
-  @media (prefers-reduced-motion: no-preference) {
-    .reveal-ready main > section {
-      opacity: 0;
-      transform: translateY(24px);
-      transition:
-        opacity 600ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms),
-        transform 600ms cubic-bezier(0.22, 1, 0.36, 1) var(--reveal-delay, 0ms);
-      will-change: opacity, transform;
-    }
-
-    .reveal-ready main > section.is-visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    border-top: 1px solid rgba(17, 17, 17, 0.08);
   }
 }
